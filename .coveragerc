@@ -1,0 +1,4 @@
+[run]
+source = zimuzu
+[html]
+directory = coverage_html_report

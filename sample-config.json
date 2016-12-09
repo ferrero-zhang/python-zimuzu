@@ -1,0 +1,35 @@
+{
+  "latest_id": "Latest resource id",
+  "plugin_path": ["Directories to load plugin"],
+  "filters": {
+    "re": {
+      "class": "zimuzu.filter.ReFilter",
+      "kwargs": {
+        "resourceid": "30722"
+      }
+    },
+    "base": {
+      "class": "zimuzu.core.Filter"
+    }
+  },
+  "api": {
+    "filters": [
+      "base"
+    ],
+    "args": [],
+    "kwargs": {
+      "cid": "your cid",
+      "accesskey": "Your accesskey"
+    }
+  },
+  "handlers": [
+    {
+      "class": "zimuzu.handler.PPrintHandler",
+      "filters": [
+        "base"
+      ],
+      "args": [],
+      "kwargs": {}
+    }
+  ]
+}

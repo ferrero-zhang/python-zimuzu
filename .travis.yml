@@ -1,0 +1,16 @@
+# https://zh.wikipedia.org/wiki/YAML
+# https://github.com/travis-ci/travis.rb#table-of-contents
+# https://docs.travis-ci.com/
+language: python
+python: 3.5
+env:
+  matrix:
+  - TOXENV=py35
+  - TOXENV=py34
+  - TOXENV=py33
+install:
+  - pip install -U tox
+  - pip install -r requirements.txt
+  - pip install -r requirements-dev.txt
+  - pip install -r requirements-extra.txt
+script: tox -e ${TOXENV}
